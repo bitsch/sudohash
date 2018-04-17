@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Apr 16, 2018 at 07:21 PM
+-- Generation Time: Apr 17, 2018 at 08:16 PM
 -- Server version: 10.1.28-MariaDB
 -- PHP Version: 7.1.11
 
@@ -21,6 +21,29 @@ SET time_zone = "+00:00";
 --
 -- Database: `chakravyuh`
 --
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `job`
+--
+
+CREATE TABLE `job` (
+  `id` int(11) NOT NULL,
+  `title` text NOT NULL,
+  `description` text NOT NULL,
+  `company` text NOT NULL,
+  `location` text NOT NULL,
+  `package` bigint(20) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `job`
+--
+
+INSERT INTO `job` (`id`, `title`, `description`, `company`, `location`, `package`) VALUES
+(1, 'ASE', 'ASFJOIDDHKWS', 'dhfkjaf', 'dslahdkjas', 12341),
+(2, 'fljlf', 'mdfanfnak', 'fdjfnksjdbf', 'fedkjndfkj', 132353);
 
 -- --------------------------------------------------------
 
@@ -227,6 +250,12 @@ INSERT INTO `user` (`SNO`, `NAME`, `EMAIL`, `CONTACT`, `PASSWORD`, `amount`, `ma
 --
 
 --
+-- Indexes for table `job`
+--
+ALTER TABLE `job`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indexes for table `player`
 --
 ALTER TABLE `player`
@@ -249,6 +278,12 @@ ALTER TABLE `user`
 --
 
 --
+-- AUTO_INCREMENT for table `job`
+--
+ALTER TABLE `job`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+
+--
 -- AUTO_INCREMENT for table `player`
 --
 ALTER TABLE `player`
@@ -264,7 +299,7 @@ ALTER TABLE `relation`
 -- AUTO_INCREMENT for table `user`
 --
 ALTER TABLE `user`
-  MODIFY `SNO` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
+  MODIFY `SNO` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
